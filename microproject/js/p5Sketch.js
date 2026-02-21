@@ -1,5 +1,6 @@
 let changeForms = 1;
 //let mousePressedCount = 0;
+let shapeSize = 80;
 
 function setup() {
   createCanvas(800, 600);      
@@ -13,7 +14,7 @@ function draw() {
   stroke(255); // White stroke
   strokeWeight(2);
 
-  hexagon(width / 2, height / 2, 80);
+  hexagon(width / 2, height / 2, shapeSize);
    
 /*if (changeShape == 1) {
   ellipse(mouseX,mouseY,60);
@@ -26,6 +27,7 @@ function draw() {
 
 
 function mousePressed() {
+  shapeSize = 40;
   //mousePressedCount++;
   //changeShape = mousePressedCount%2;
 }

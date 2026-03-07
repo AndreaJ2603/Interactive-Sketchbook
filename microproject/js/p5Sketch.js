@@ -21,8 +21,12 @@ function draw() {
     shapeSize = 80;
   }
 
+  let moveSpeed = 0;
+  
+  moveSpeed = 0.5 * frameCount;
 
-  hexagon(width / 2, height / 2, shapeSize);
+
+  hexagon(80, height / 2, shapeSize, moveSpeed);
    
 /*if (changeShape == 1) {
   ellipse(mouseX,mouseY,60);
@@ -43,13 +47,13 @@ function mousePressed() {
 
 
 
-function hexagon(cX, cY, r) {
+function hexagon(cX, cY, r, s) {
   beginShape();
 
   for (let a = 0; a < TWO_PI; a += TWO_PI / 6) {
     let x = cX + r * cos(a);
     let y = cY + r * sin(a);
-    vertex(x, y);
+    vertex(x+s, y);
   }
   endShape(CLOSE); 
 }

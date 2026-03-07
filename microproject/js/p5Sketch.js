@@ -6,6 +6,7 @@ let startTime;
 let angle = 0;
 let hexX = 80;
 let myFillColor;
+//let reverseDirection = false;
 
 
 function setup() {
@@ -32,9 +33,30 @@ function draw() {
   //if (startMoving) {
       moveSpeed = 0.005 * frameCount;
   //}
-  hexX = hexX+ moveSpeed;
+  
+  /*if (hexX > 700 ) {
+    reverseDirection = true;
+  } 
+  
+  if (hexX < 0) {
+    reverseDirection = false;
+  }
+  
+  if (reverseDirection) {
+    hexX = hexX - moveSpeed;  
+  } else {
+    hexX = hexX + moveSpeed;
+  }*/
+
+  hexX = hexX + moveSpeed;
+  if (hexX > width ) {
+    hexX = 0;
+  }
+  
+
+
   let hexY = height / 2;
-  let radius = shapeSize;
+  let radius = shapeSize
   
   push(); 
   translate(hexX, hexY); 

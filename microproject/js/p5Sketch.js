@@ -8,7 +8,7 @@ let hexX = 80;
 
 
 function setup() {
-  createCanvas(800, 600);     
+  createCanvas(1200, 600);     
   angleMode(DEGREES);
 }
 

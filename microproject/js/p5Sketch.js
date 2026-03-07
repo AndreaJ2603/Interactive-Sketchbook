@@ -31,7 +31,8 @@ function draw() {
   let moveSpeed = 0;
   
   //if (startMoving) {
-      moveSpeed = 0.005 * frameCount;
+      //moveSpeed = 0.005 * frameCount;
+      moveSpeed = moveSpeed + 2;
   //}
   
   /*if (hexX > 700 ) {

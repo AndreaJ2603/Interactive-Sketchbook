@@ -5,18 +5,19 @@ let startTime;
 //let startMoving = false;
 let angle = 0;
 let hexX = 80;
+let myFillColor;
 
 
 function setup() {
   createCanvas(1200, 600);     
+  myFillColor = color(100, 150, 200);
   angleMode(DEGREES);
 }
 
 function draw() {
 
   background(200);
-
-  fill(100, 150, 200); // Light blue fill
+  fill(myFillColor);
   stroke(255); // White stroke
   strokeWeight(2);
 
@@ -58,6 +59,7 @@ function draw() {
 function mousePressed() {
   //startMoving = true;
   shapeSize = 120;
+  myFillColor = color(255, 0, 0); // red fill
   //startTime = millis();
 
   //mousePressedCount++;

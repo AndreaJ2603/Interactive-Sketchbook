@@ -1,55 +1,47 @@
-let changeForms = 1;
-//let mousePressedCount = 0;
-let shapeSize = 80;
-let startTime;
-
 function setup() {
-  createCanvas(800, 600);      
+  createCanvas(400, 400, WEBGL);
 }
 
 function draw() {
-
   background(200);
 
-  fill(100, 150, 200); // Light blue fill
-  stroke(255); // White stroke
-  strokeWeight(2);
-
-  let currentTime = millis();
-
-  if (currentTime - startTime >= 5000) {
-    shapeSize = 80;
-  }
-
-
-  hexagon(width / 2, height / 2, shapeSize);
-   
-/*if (changeShape == 1) {
-  ellipse(mouseX,mouseY,60);
-} else {
-  square(mouseX, mouseY, 100);
-}*/
-
+  drawHexagon3D();
 
 }
 
-
-function mousePressed() {
-  shapeSize = 40;
-  startTime = millis();
-  //mousePressedCount++;
-  //changeShape = mousePressedCount%2;
-}
-
-
-
-function hexagon(cX, cY, r) {
+function drawHexagon(cx, cy, cz, r) {
   beginShape();
-
-  for (let a = 0; a < TWO_PI; a += TWO_PI / 6) {
-    let x = cX + r * cos(a);
-    let y = cY + r * sin(a);
-    vertex(x, y);
+  for (let i = 0; i < 6; i++) {
+    let angle = TWO_PI / 6 * i;
+    vertex(cx + cos(angle) * r, cy + sin(angle) * r, cz);
   }
-  endShape(CLOSE); 
+  endShape(CLOSE);
+}
+
+
+function drawHexagon3D() {
+  rotateX(3.5);
+  rotateY(4);
+  
+  let radius = 100;
+  let h = 50; // Height of the prism
+  
+  // Create a 3D Hexagonal Prism
+  stroke(0);
+  fill(100, 150, 250);
+  
+  // Top and Bottom faces
+  drawHexagon(0, 0, -h/2, radius);
+  drawHexagon(0, 0, h/2, radius);
+  
+  // Connecting sides
+  beginShape(QUAD_STRIP);
+  for (let i = 0; i <= 6; i++) {
+    let angle = TWO_PI / 6 * i;
+    let x = cos(angle) * radius;
+    let y = sin(angle) * radius;
+    vertex(x, y, -h/2);
+    vertex(x, y, h/2);
+  }
+  endShape(CLOSE);
 }

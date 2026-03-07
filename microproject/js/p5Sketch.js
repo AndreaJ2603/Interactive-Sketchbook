@@ -56,8 +56,8 @@ function draw() {
 
 
 function mousePressed() {
-  startMoving = true;
-  //shapeSize = 40;
+  //startMoving = true;
+  shapeSize = 120;
   //startTime = millis();
 
   //mousePressedCount++;

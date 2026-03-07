@@ -2,10 +2,14 @@ let changeForms = 1;
 //let mousePressedCount = 0;
 let shapeSize = 80;
 let startTime;
-let startMoving = false;
+//let startMoving = false;
+let angle = 0;
+let hexX = 80;
+
 
 function setup() {
-  createCanvas(800, 600);      
+  createCanvas(800, 600);     
+  angleMode(DEGREES);
 }
 
 function draw() {
@@ -16,21 +20,30 @@ function draw() {
   stroke(255); // White stroke
   strokeWeight(2);
 
-  let currentTime = millis();
+  //let currentTime = millis();
 
-  if (currentTime - startTime >= 5000) {
-    shapeSize = 80;
-  }
+  //if (currentTime - startTime >= 5000) {
+  //  shapeSize = 80;
+  //}
 
   let moveSpeed = 0;
   
-  if (startMoving) {
-      moveSpeed = 0.5 * frameCount;
-  }
+  //if (startMoving) {
+      moveSpeed = 0.005 * frameCount;
+  //}
+  hexX = hexX+ moveSpeed;
+  let hexY = height / 2;
+  let radius = shapeSize;
+  
+  push(); 
+  translate(hexX, hexY); 
+  rotate(angle);
 
-
-
-  hexagon(80, height / 2, shapeSize, moveSpeed);
+  drawHexagon(radius);
+  
+  pop();
+  
+  angle += 1;
    
 /*if (changeShape == 1) {
   ellipse(mouseX,mouseY,60);
@@ -44,21 +57,22 @@ function draw() {
 
 function mousePressed() {
   startMoving = true;
-  shapeSize = 40;
-  startTime = millis();
+  //shapeSize = 40;
+  //startTime = millis();
+
   //mousePressedCount++;
   //changeShape = mousePressedCount%2;
 }
 
 
 
-function hexagon(cX, cY, r, s) {
+function drawHexagon(radius) {
   beginShape();
-
-  for (let a = 0; a < TWO_PI; a += TWO_PI / 6) {
-    let x = cX + r * cos(a);
-    let y = cY + r * sin(a);
-    vertex(x+s, y);
+  for (let i = 0; i < 6; i++) {
+    let theta = i * 60; // 360 / 6 sides
+    let x = radius * cos(theta);
+    let y = radius * sin(theta);
+    vertex(x, y);
   }
-  endShape(CLOSE); 
+  endShape(CLOSE);
 }

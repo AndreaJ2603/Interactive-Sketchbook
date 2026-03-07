@@ -2,6 +2,7 @@ let changeForms = 1;
 //let mousePressedCount = 0;
 let shapeSize = 80;
 let startTime;
+let startMoving = false;
 
 function setup() {
   createCanvas(800, 600);      
@@ -23,7 +24,10 @@ function draw() {
 
   let moveSpeed = 0;
   
-  moveSpeed = 0.5 * frameCount;
+  if (startMoving) {
+      moveSpeed = 0.5 * frameCount;
+  }
+
 
 
   hexagon(80, height / 2, shapeSize, moveSpeed);
@@ -39,6 +43,7 @@ function draw() {
 
 
 function mousePressed() {
+  startMoving = true;
   shapeSize = 40;
   startTime = millis();
   //mousePressedCount++;

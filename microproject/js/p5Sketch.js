@@ -7,6 +7,9 @@ let angle = 0;
 let hexX = 80;
 let myFillColor;
 //let reverseDirection = false;
+let myPoints = 0;
+let timeLeft = 60;
+
 
 
 function setup() {
@@ -18,6 +21,7 @@ function setup() {
 function draw() {
 
   background(200);
+  text("Points: " + myPoints,50,50);
   fill(myFillColor);
   stroke(255); // White stroke
   strokeWeight(2);

@@ -9,14 +9,16 @@ let hexX = 80;
 let myFillColor;
 //let reverseDirection = false;
 let myPoints = 0;
-let timeLeft = 60;
+let gameDuration = 60;
 let isRed = false;
+let beginTime;
 
 
 
 function setup() {
   createCanvas(1200, 600);   
   textSize(50); 
+  beginTime = millis();
   startTime = millis();  
 
   myFillColor = color(100, 150, 200);
@@ -27,14 +29,18 @@ function draw() {
 
   background(200);
   fill('green');
+
+  let elapsedTotalTime = int((millis() - beginTime) / 1000);
+  let remainingTime = gameDuration - elapsedTotalTime;
+  
   text("Points: " + myPoints,50,60);
-  text("Time Left: " + timeLeft, 850,60);
+  text("Time Left: " + remainingTime, 850,60);
 
   fill(myFillColor);
   stroke(255); // White stroke
   strokeWeight(2);
 
-  let currentTime = millis();  
+  //let currentTime = millis();  
   let elapsedTime = millis() - startTime;
   let timeToSwitch = random(1000, 3000);
   let timeToSwitchBack = 200;

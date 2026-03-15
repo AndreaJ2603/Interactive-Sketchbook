@@ -35,7 +35,7 @@ function draw() {
 
   let currentTime = millis();  
   let elapsedTime = millis() - startTime;
-  let timeToSwitch = random(500, 3000);
+  let timeToSwitch = random(1000, 3000);
   let timeToSwitchBack = 200;
 
   if (elapsedTime >= timeToSwitch && elapsedTime < timeToSwitch+timeToSwitchBack) {

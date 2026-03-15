@@ -15,7 +15,7 @@ let timeLeft = 60;
 function setup() {
   createCanvas(1200, 600);   
   textSize(70); 
-  fill(green);
+  fill('green');
   text("Points: " + myPoints,50,50);
 
   myFillColor = color(100, 150, 200);

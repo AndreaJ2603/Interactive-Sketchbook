@@ -13,7 +13,10 @@ let timeLeft = 60;
 
 
 function setup() {
-  createCanvas(1200, 600);     
+  createCanvas(1200, 600);   
+  textSize(30);
+  text("Points: " + myPoints,50,50);
+
   myFillColor = color(100, 150, 200);
   angleMode(DEGREES);
 }
@@ -21,7 +24,7 @@ function setup() {
 function draw() {
 
   background(200);
-  text("Points: " + myPoints,50,50);
+  //text("Points: " + myPoints,50,50);
   fill(myFillColor);
   stroke(255); // White stroke
   strokeWeight(2);

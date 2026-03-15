@@ -26,7 +26,7 @@ function draw() {
   background(200);
   fill('green');
   text("Points: " + myPoints,50,60);
-  text("Time Left; " + timeLeft, 1100,60);
+  text("Time Left; " + timeLeft, 1000,60);
 
   //text("Points: " + myPoints,50,50);
   fill(myFillColor);

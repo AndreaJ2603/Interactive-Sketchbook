@@ -39,8 +39,8 @@ function draw() {
   fill('green');
 
   if (!isStarted) {
-    text("Collect 10 points by clicking when Red.", width/2, height/2);
-    text("(Press any key to start.)", width/2, height/2+60);
+    text("Collect 10 points by clicking when Red.", 150, height/2);
+    text("(Press any key to start.)", 300, height/2+60);
   } else {
     text("Points: " + myPoints,50,60);
     text("Time Left: " + timeLeft, 850,60);

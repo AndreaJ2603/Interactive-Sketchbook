@@ -34,12 +34,11 @@ function draw() {
   strokeWeight(2);
 
   let currentTime = millis();
-  if (currentTime - startTime >= 1000) {
-    bigRed();
-    startTimeRed = millis();
-  }
+  let elapsedTime = millis() - startTime;
 
-  if (currentTime - startTimeRed >= 100) {
+  if (elapsedTime >= 1000 && elapsedTime < 1200) {
+    bigRed();
+  } else if (elapsedTime >= 1200) {
     smallBlue();
     startTime = millis();
   }

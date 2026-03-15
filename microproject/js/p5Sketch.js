@@ -10,6 +10,7 @@ let myFillColor;
 //let reverseDirection = false;
 let myPoints = 0;
 let timeLeft = 60;
+let isRed = false;
 
 
 
@@ -95,6 +96,9 @@ function draw() {
 
 
 function mousePressed() {
+  if (isRed) {
+    myPoints++;
+  }
   //startMoving = true;
   //shapeSize = 120;
   // myFillColor = color(255, 0, 0); // red fill
@@ -120,10 +124,12 @@ function drawHexagon(radius) {
 function smallBlue(){
   shapeSize = 80;
   myFillColor = color(100, 150, 200);
+  isRed = false;
 }
 
 
 function bigRed(){
   shapeSize = 120;
   myFillColor = color(255, 0, 0); // red fill  
+  isRed = true;
 }

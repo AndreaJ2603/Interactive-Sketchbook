@@ -12,6 +12,9 @@ let myPoints = 0;
 let gameDuration = 60;
 let isRed = false;
 let beginTime;
+let timeIsUp = false;
+let timeLeft = 60;
+
 
 
 
@@ -28,36 +31,45 @@ function setup() {
 function draw() {
 
   background(200);
+
   fill('green');
-
-  let elapsedTotalTime = int((millis() - beginTime) / 1000);
-  let remainingTime = gameDuration - elapsedTotalTime;
-  
   text("Points: " + myPoints,50,60);
-  text("Time Left: " + remainingTime, 850,60);
-
-  fill(myFillColor);
-  stroke(255); // White stroke
-  strokeWeight(2);
-
-  //let currentTime = millis();  
-  let elapsedTime = millis() - startTime;
-  let timeToSwitch = random(1000, 3000);
-  let timeToSwitchBack = 200;
-
-  if (elapsedTime >= timeToSwitch && elapsedTime < timeToSwitch+timeToSwitchBack) {
-    bigRed();
-  } else if (elapsedTime >= timeToSwitch+timeToSwitchBack) {
-    smallBlue();
-    startTime = millis();
-  }
+  text("Time Left: " + timeLeft, 850,60);
 
 
-  let moveSpeed = 0;
+  if (!timeIsUp) {
+    let elapsedTotalTime = int((millis() - beginTime) / 1000);
+    let remainingTime = gameDuration - elapsedTotalTime;
+    timeLeft = remainingTime;
+
+    if (remainingTime <= 0) {
+      remainingTime = 0;
+      timeIsUp = true;
+    }
+ 
+  
+
+    fill(myFillColor);
+    stroke(255); // White stroke
+    strokeWeight(2);
+
+    //let currentTime = millis();  
+    let elapsedTime = millis() - startTime;
+    let timeToSwitch = random(1000, 3000);
+    let timeToSwitchBack = 200;
+
+    if (elapsedTime >= timeToSwitch && elapsedTime < timeToSwitch+timeToSwitchBack) {
+      bigRed();
+    } else if (elapsedTime >= timeToSwitch+timeToSwitchBack) {
+      smallBlue();
+      startTime = millis();
+    }
+
+    let moveSpeed = 0;
   
   //if (startMoving) {
       //moveSpeed = 0.005 * frameCount;
-      moveSpeed = moveSpeed + 2;
+    moveSpeed = moveSpeed + 2;
   //}
   
   /*if (hexX > 700 ) {
@@ -74,28 +86,28 @@ function draw() {
     hexX = hexX + moveSpeed;
   }*/
 
-  hexX = hexX + moveSpeed;
-  if (hexX > width ) {
-    hexX = 0;
-  }
+      hexX = hexX + moveSpeed;
+      if (hexX > width ) {
+       hexX = 0;
+     }
   
-
-
-  let hexY = height / 2;
-  let radius = shapeSize
+    let hexY = height / 2;
+    let radius = shapeSize
   
-  push(); 
-  translate(hexX, hexY); 
-  rotate(angle);
-  drawHexagon(radius);
-  pop();
-  angle += 1;
+   push(); 
+   translate(hexX, hexY); 
+   rotate(angle);
+   drawHexagon(radius);
+   pop();
+   angle += 1;
    
 /*if (changeShape == 1) {
   ellipse(mouseX,mouseY,60);
 } else {
   square(mouseX, mouseY, 100);
 }*/
+
+  }
 
 
 }

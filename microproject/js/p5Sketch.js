@@ -2,6 +2,7 @@ let changeForms = 1;
 //let mousePressedCount = 0;
 let shapeSize = 80;
 let startTime;
+let startTimeRed;
 //let startMoving = false;
 let angle = 0;
 let hexX = 80;
@@ -35,7 +36,14 @@ function draw() {
   let currentTime = millis();
   if (currentTime - startTime >= 1000) {
     bigRed();
+    startTimeRed = millis();
   }
+
+  if (currentTime - startTimeRed >= 100) {
+    smallBlue();
+    startTime = millis();
+  }
+
 
   let moveSpeed = 0;
   

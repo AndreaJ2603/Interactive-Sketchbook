@@ -1,7 +1,7 @@
 let changeForms = 1;
 //let mousePressedCount = 0;
 let shapeSize = 80;
-let startTime = millis();
+let startTime;
 //let startMoving = false;
 let angle = 0;
 let hexX = 80;
@@ -15,7 +15,7 @@ let timeLeft = 60;
 function setup() {
   createCanvas(1200, 600);   
   textSize(50); 
-  
+  startTime = millis();  
 
   myFillColor = color(100, 150, 200);
   angleMode(DEGREES);

@@ -33,12 +33,14 @@ function draw() {
   stroke(255); // White stroke
   strokeWeight(2);
 
-  let currentTime = millis();
+  let currentTime = millis();  
   let elapsedTime = millis() - startTime;
+  let timeToSwitch = random(500, 3000);
+  let timeToSwitchBack = 200;
 
-  if (elapsedTime >= 1000 && elapsedTime < 1200) {
+  if (elapsedTime >= timeToSwitch && elapsedTime < timeToSwitch+timeToSwitchBack) {
     bigRed();
-  } else if (elapsedTime >= 1200) {
+  } else if (elapsedTime >= timeToSwitch+timeToSwitchBack) {
     smallBlue();
     startTime = millis();
   }

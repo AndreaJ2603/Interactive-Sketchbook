@@ -1,7 +1,7 @@
 let changeForms = 1;
 //let mousePressedCount = 0;
 let shapeSize = 80;
-let startTime;
+let startTime = millis();
 //let startMoving = false;
 let angle = 0;
 let hexX = 80;
@@ -26,18 +26,16 @@ function draw() {
   background(200);
   fill('green');
   text("Points: " + myPoints,50,60);
-  text("Time Left; " + timeLeft, 850,60);
+  text("Time Left: " + timeLeft, 850,60);
 
-  //text("Points: " + myPoints,50,50);
   fill(myFillColor);
   stroke(255); // White stroke
   strokeWeight(2);
 
-  //let currentTime = millis();
-
-  //if (currentTime - startTime >= 5000) {
-  //  shapeSize = 80;
-  //}
+  let currentTime = millis();
+  if (currentTime - startTime >= 1000) {
+    bigRed();
+  }
 
   let moveSpeed = 0;
   
@@ -73,11 +71,8 @@ function draw() {
   push(); 
   translate(hexX, hexY); 
   rotate(angle);
-
   drawHexagon(radius);
-  
   pop();
-  
   angle += 1;
    
 /*if (changeShape == 1) {
@@ -92,8 +87,8 @@ function draw() {
 
 function mousePressed() {
   //startMoving = true;
-  shapeSize = 120;
-  myFillColor = color(255, 0, 0); // red fill
+  //shapeSize = 120;
+  // myFillColor = color(255, 0, 0); // red fill
   //startTime = millis();
 
   //mousePressedCount++;
@@ -111,4 +106,15 @@ function drawHexagon(radius) {
     vertex(x, y);
   }
   endShape(CLOSE);
+}
+
+function smallBlue(){
+  shapeSize = 80;
+  myFillColor = color(100, 150, 200);
+}
+
+
+function bigRed(){
+  shapeSize = 120;
+  myFillColor = color(255, 0, 0); // red fill  
 }

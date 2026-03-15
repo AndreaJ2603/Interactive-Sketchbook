@@ -25,6 +25,9 @@ function setup() {
 function draw() {
 
   background(200);
+  fill('green');
+  text("Points: " + myPoints,50,50);
+
   //text("Points: " + myPoints,50,50);
   fill(myFillColor);
   stroke(255); // White stroke

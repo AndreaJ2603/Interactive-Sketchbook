@@ -118,7 +118,7 @@ function draw() {
       if (myPoints <10) {
         text("Nope, press any key to try again.", 250, height/2+60);
       } else {
-        drawFlower(width / 2, height / 2, 50, 10, color(255, 100, 150));
+        drawFlower(width / 2, height / 2, 200, 10, color(255, 100, 150));
 
       }
     }

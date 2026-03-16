@@ -119,6 +119,7 @@ function draw() {
         text("Nope, press any key to try again.", 300, height/2+60);
 
 
+
       }
     }
 
@@ -145,6 +146,11 @@ function mousePressed() {
 
 function keyPressed() {
   isStarted = true;
+
+  if (timeIsUp) {
+    beginTime = millis();
+    timeIsUp = false;
+  }
 }
 
 

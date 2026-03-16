@@ -36,7 +36,7 @@ function draw() {
 
   background(200);
 
-  //stroke(255); // White stroke
+  stroke(255); // White stroke
   //strokeWeight(2);
 
   fill('green');

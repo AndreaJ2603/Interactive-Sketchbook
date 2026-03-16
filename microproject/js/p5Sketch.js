@@ -114,6 +114,12 @@ function draw() {
     square(mouseX, mouseY, 100);
   }*/
 
+    } else {
+      if (myPoints <10) {
+        text("Nope, press any key to try again.", 300, height/2+60);
+
+
+      }
     }
 
   }

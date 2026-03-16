@@ -39,7 +39,7 @@ function draw() {
   fill('green');
 
   if (!isStarted) {
-    text("Collect 10 points by clicking when Red.", 150, height/2);
+    text("Collect 10 points by Clicking when Red.", 150, height/2);
     text("(Press any key to start.)", 300, height/2+60);
   } else {
     text("Points: " + myPoints,50,60);
@@ -116,9 +116,9 @@ function draw() {
 
     } else {
       if (myPoints <10) {
-        text("Nope, press any key to try again.", 300, height/2+60);
-
-
+        text("Nope, press any key to try again.", 250, height/2+60);
+      } else {
+        drawFlower(width / 2, height / 2, 50, 10, color(255, 100, 150));
 
       }
     }
@@ -178,3 +178,23 @@ function bigRed(){
   myFillColor = color(255, 0, 0); // red fill  
   isRed = true;
 }
+
+
+function drawFlower(flowerX, flowerY, size, petals, c) {
+  push(); // Saves the current drawing state
+  translate(flowerX, flowerY); // Moves the origin (0,0) to the flower's center
+
+  // Draw the petals using a loop and rotation
+  fill(c); // Set the petal color
+  noStroke(); // Remove outlines
+  for (let i = 0; i < petals; i++) {
+    ellipse(0, size / 2, size / 4, size); // Draws an ellipse (petal) away from the origin
+    rotate(360 / petals); // Rotates the canvas for the next petal
+  }
+
+  // Draw the center of the flower
+  fill(255, 204, 0); // Set yellow color for the center
+  circle(0, 0, size / 2); // Draw the central circle
+  pop(); // Restores the original drawing state
+}
+

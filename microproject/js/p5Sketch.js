@@ -149,6 +149,7 @@ function keyPressed() {
 
   if (timeIsUp) {
     beginTime = millis();
+    myPoints = 0;
     timeIsUp = false;
   }
 }

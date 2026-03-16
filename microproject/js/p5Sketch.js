@@ -151,7 +151,11 @@ function mousePressed() {
 }
 
 function keyPressed() {
-  isStarted = true;
+  if (!isStarted) {
+    isStarted = true;
+    beginTime = millis();
+  }
+  
 
   if (timeIsUp) {
     beginTime = millis();

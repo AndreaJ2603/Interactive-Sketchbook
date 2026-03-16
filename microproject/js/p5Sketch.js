@@ -28,6 +28,8 @@ function setup() {
 
   myFillColor = color(100, 150, 200);
   angleMode(DEGREES);
+
+  flowerSize = 50;
 }
 
 function draw() {

@@ -42,7 +42,8 @@ function draw() {
   fill('green');
 
   if (!isStarted) {
-    textFont("sans-serif");
+    //textFont("sans-serif");
+    textFont("merriweather");
     text("Collect 10 points by Clicking when Red.", 150, height/2);
     text("(Press any key to start.)", 300, height/2+60);
   } else {
@@ -121,12 +122,14 @@ function draw() {
 
     } else {
       if (myPoints <10) {
-        textFont("sans-serif");
+        //textFont("sans-serif");
+        textFont("merriweather");
         text("Nope, press any key to try again.", 250, height/2+60);
       } else {
         drawFlower(width / 2, height / 2, 200, 10, color(255, 100, 150));
         if (frameCount % 60 < 30) {
-          textFont("sans-serif");
+          //textFont("sans-serif");
+          textFont("merriweather");
           text("YOU WIN! Press any key to go again.", 250, height/2+60);
         }
 

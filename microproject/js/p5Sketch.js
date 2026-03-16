@@ -15,6 +15,7 @@ let beginTime;
 let timeIsUp = false;
 let timeLeft = 60;
 let isStarted = false;
+let flowerSize = 50; // Initial size
 
 
 
@@ -184,6 +185,8 @@ function drawFlower(flowerX, flowerY, size, petals, c) {
   push(); // Saves the current drawing state
   translate(flowerX, flowerY); // Moves the origin (0,0) to the flower's center
 
+  scale(flowerSize / 50); 
+
   // Draw the petals using a loop and rotation
   fill(c); // Set the petal color
   noStroke(); // Remove outlines
@@ -195,6 +198,11 @@ function drawFlower(flowerX, flowerY, size, petals, c) {
   // Draw the center of the flower
   fill(255, 204, 0); // Set yellow color for the center
   circle(0, 0, size / 2); // Draw the central circle
+
+  flowerSize += 0.5;
+  if (flowerSize > 300) {
+    flowerSize = 50;
+  }
   pop(); // Restores the original drawing state
 }
 

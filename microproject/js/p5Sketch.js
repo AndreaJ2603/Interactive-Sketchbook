@@ -42,9 +42,11 @@ function draw() {
   fill('green');
 
   if (!isStarted) {
+    textFont("sans-serif");
     text("Collect 10 points by Clicking when Red.", 150, height/2);
     text("(Press any key to start.)", 300, height/2+60);
   } else {
+    textFont("impact");
     text("Points: " + myPoints,50,60);
     text("Time Left: " + timeLeft, 850,60);
 
@@ -119,6 +121,7 @@ function draw() {
 
     } else {
       if (myPoints <10) {
+        textFont("sans-serif");
         text("Nope, press any key to try again.", 250, height/2+60);
       } else {
         drawFlower(width / 2, height / 2, 200, 10, color(255, 100, 150));

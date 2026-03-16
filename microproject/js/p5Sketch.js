@@ -125,6 +125,10 @@ function draw() {
         text("Nope, press any key to try again.", 250, height/2+60);
       } else {
         drawFlower(width / 2, height / 2, 200, 10, color(255, 100, 150));
+        if (frameCount % 60 < 30) {
+          textFont("sans-serif");
+          text("YOU WIN! Press any key to go again.", 250, height/2+60);
+        }
 
       }
     }

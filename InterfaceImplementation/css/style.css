@@ -1,5 +1,11 @@
 body {
   background-color: #F5F5F5; /* You can use color names, HEX, or RGB */
   .fixed-width-container { width: 1000px; }
+  .center_items_horizontaly {
+    display: flex;            /* Enables Flexbox */
+    justify-content: center;   /* Centers items horizontally */
+    flex-direction: column;    /* Stack them vertically; omit for side-by-side */
+}
+
 
 }

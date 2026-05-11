@@ -1,7 +1,7 @@
 body {
     background-color: #F5F5F5; /* You can use color names, HEX, or RGB */
     .fixed-width-container { width: 1000px; }
-    .text-container {
+    .center-container {
          text-align: center;
     }
     img {

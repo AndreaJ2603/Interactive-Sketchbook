@@ -1,11 +1,12 @@
 body {
-  background-color: #F5F5F5; /* You can use color names, HEX, or RGB */
-  .fixed-width-container { width: 1000px; }
-  .container {
-    display: flex;            /* Enables Flexbox */
-    justify-content: center;   /* Centers items horizontally */
-    flex-direction: column;    /* Stack them vertically; omit for side-by-side */
-}
-
+    background-color: #F5F5F5; /* You can use color names, HEX, or RGB */
+    .fixed-width-container { width: 1000px; }
+    .text-container {
+         text-align: center;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 
 }

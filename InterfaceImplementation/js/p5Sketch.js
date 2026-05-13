@@ -158,7 +158,7 @@ function mousePressed() {
 }
 
 function keyPressed() {
-  if (!isStarted) {
+  if (!isStarted & (key === ' ' || keyCode === 32)) {
     isStarted = true;
     beginTime = millis();
   }

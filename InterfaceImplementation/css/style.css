@@ -29,15 +29,15 @@ body {
 
      .container {
         display: flex; /* Aligns children side by side */
-        gap: 10px;    /* Adds space between the divs */
+        width: 100%;
     }
 
     .sidebar {
-        flex: 0 0 20%; /* Fixed at 30% width */
+        width: 20%;
     }
 
     .main-content {
-        flex: 1;       /* Takes up all remaining space (70%) */
+        width: 80%;
     }
 
 

@@ -6,6 +6,10 @@ body {
     .center-container {
          text-align: center;
     }
+
+    .left-text { text-align: left; }
+
+
     img {
         display: block;
         margin: 0 auto;

@@ -44,8 +44,8 @@ function draw() {
   if (!isStarted) {
     //textFont("sans-serif");
     textFont("merriweather");
-    text("Collect 10 points by Clicking when Red.", 150, height/2);
-    text("(Press any key to start.)", 300, height/2+60);
+    //text("Collect 10 points by Clicking when Red.", 150, height/2);
+    //text("(Press any key to start.)", 300, height/2+60);
   } else {
     textFont("impact");
     text("Points: " + myPoints,50,60);

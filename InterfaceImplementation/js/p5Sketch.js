@@ -21,7 +21,8 @@ let flowerSize = 50; // Initial size
 
 
 function setup() {
-  createCanvas(1200, 600);   
+  let cnv = createCanvas(1200, 600);   
+  cnv.parent('p5-container');
   textSize(50); 
   beginTime = millis();
   startTime = millis();  

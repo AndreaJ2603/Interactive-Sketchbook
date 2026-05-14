@@ -27,19 +27,6 @@ body {
         width: 100%;             /* This makes it span across the container */
     }
 
-     .container {
-        display: flex; /* Aligns children side by side */
-        width: 100%;
-    }
-
-    .sidebar {
-        width: 10%;
-    }
-
-    .main-content {
-        width: 90%;
-    }
-    
 
 
 }

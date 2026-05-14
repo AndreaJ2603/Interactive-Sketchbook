@@ -22,9 +22,23 @@ body {
     font-family: 'Verdana', sans-serif;
 
     .thick-line {
-        height: 10px;            /* This determines the thickness */
+        height: 20px;            /* This determines the thickness */
         background-color: #C8C8C8; /* This determines the color */
         width: 100%;             /* This makes it span across the container */
     }
+
+     .container {
+        display: flex; /* Aligns children side by side */
+        gap: 10px;    /* Adds space between the divs */
+    }
+
+    .sidebar {
+        flex: 0 0 20%; /* Fixed at 30% width */
+    }
+
+    .main-content {
+        flex: 1;       /* Takes up all remaining space (70%) */
+    }
+
 
 }

@@ -21,4 +21,10 @@ body {
 
     font-family: 'Verdana', sans-serif;
 
+    .thick-line {
+        height: 10px;            /* This determines the thickness */
+        background-color: #C8C8C8; /* This determines the color */
+        width: 100%;             /* This makes it span across the container */
+    }
+
 }

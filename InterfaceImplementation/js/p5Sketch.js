@@ -16,12 +16,14 @@ let timeIsUp = false;
 let timeLeft = 60;
 let isStarted = false;
 let flowerSize = 50; // Initial size
+let cnv;
 
 
 
 
 function setup() {
-  let cnv = createCanvas(1200, 600);   
+  cnv = createCanvas(1200, 600);   
+  cnv.parent('sketch-container');
   textSize(50); 
   beginTime = millis();
   startTime = millis();  

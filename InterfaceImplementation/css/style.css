@@ -68,6 +68,8 @@ body {
         flex: 1; 
         width: 100%;
         border-width: 30px;
+        border-style: solid; /* Required for the border to show */
+        border-color: black;
     }
 
 }

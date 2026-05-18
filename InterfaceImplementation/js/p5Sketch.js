@@ -41,14 +41,15 @@ function draw() {
   stroke(255); // White stroke
   //strokeWeight(2);
 
-  fill('black');
+  //fill('green');
 
   if (!isStarted) {
     //textFont("sans-serif");
     textFont("merriweather");
     //text("Collect 10 points by Clicking when Red.", 150, height/2);
     //text("(Press any key to start.)", 300, height/2+60);
-
+    
+    fill('myFillColor');
     push(); 
     translate(hexX, height / 2); 
     drawHexagon(80);
@@ -57,10 +58,11 @@ function draw() {
     
     
   } else {
+    fill('black');
     textFont("impact");
-    textSize(20);
-    text("Points: " + myPoints,50,60);
-    text("Time Left: " + timeLeft, 850,60);
+    textSize(24);
+    text("Points: " + myPoints,50,30);
+    text("Time Left: " + timeLeft, 100,30);
 
 
     if (!timeIsUp) {

@@ -41,7 +41,7 @@ function draw() {
   stroke(255); // White stroke
   //strokeWeight(2);
 
-  fill('green');
+  fill('black');
 
   if (!isStarted) {
     //textFont("sans-serif");
@@ -58,6 +58,7 @@ function draw() {
     
   } else {
     textFont("impact");
+    textSize(20);
     text("Points: " + myPoints,50,60);
     text("Time Left: " + timeLeft, 850,60);
 

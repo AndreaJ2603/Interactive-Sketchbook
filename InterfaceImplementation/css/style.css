@@ -67,8 +67,6 @@ body {
     .boxV {
         flex: 1; 
         width: 100%;
-        border-width: 50px;
-        border-style: solid; /* Required for the border to show */
     }
 
 }

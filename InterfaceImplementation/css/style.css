@@ -44,7 +44,7 @@ body {
     .container {
         display: flex;
         width: 100%;
-        height: 400px; /* Adjust height as needed */
+        height: 800px; /* Adjust height as needed */
         align-items: stretch; /* Ensures everything is the same height */
     }
 
@@ -53,7 +53,7 @@ body {
     }
 
     .divider {
-        width: 10px; /* Thickness of the vertical line */
+        width: 20px; /* Thickness of the vertical line */
         background-color: #E5E5E5; /* Color of the line */
     }
 

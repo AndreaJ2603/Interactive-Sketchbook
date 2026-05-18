@@ -61,8 +61,8 @@ function draw() {
     fill('black');
     textFont("impact");
     textSize(24);
-    text("Points: " + myPoints,50,30);
-    text("Time Left: " + timeLeft, 1000,30);
+    text("Points: " + myPoints,30,40);
+    text("Time Left: " + timeLeft, 1060,40);
 
 
     if (!timeIsUp) {

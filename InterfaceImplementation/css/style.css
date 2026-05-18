@@ -75,4 +75,12 @@ body {
         width: 100%;
     }
 
+    .rounded-box {
+        width: 200px;
+        height: 100px;
+        background-color: #E5E5E5;
+     /* This rounds all four corners equally */
+        border-radius: 15px; 
+    }
+
 }

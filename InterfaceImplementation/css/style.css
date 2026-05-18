@@ -28,5 +28,17 @@ body {
     }
 
 
+    .flex-container {
+         display: flex; /* Aligns children side by side */
+    }
+
+    .sidebar {
+        flex: 0 0 30%; /* Fixed at 30% width */
+    }
+
+    .main-content {
+        flex: 1; /* Automatically fills the remaining 70% space */
+    }
+
 
 }

@@ -33,7 +33,7 @@ body {
     }
 
     .sidebar {
-        flex: 0 0 30%; /* Fixed at 30% width */
+        flex: 0 0 20%; /* Fixed at 30% width */
     }
 
     .main-content {

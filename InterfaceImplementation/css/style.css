@@ -23,7 +23,7 @@ body {
 
     .thick-line {
         height: 20px;            /* This determines the thickness */
-        background-color: #C8C8C8; /* This determines the color */
+        background-color: #E5E5E5; /* This determines the color */
         width: 100%;             /* This makes it span across the container */
     }
 

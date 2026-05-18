@@ -50,7 +50,7 @@ function draw() {
     //text("(Press any key to start.)", 300, height/2+60);
 
     push(); 
-    translate(hexX, hexY); 
+    translate(hexX, height / 2); 
     drawHexagon(80);
     pop();
 

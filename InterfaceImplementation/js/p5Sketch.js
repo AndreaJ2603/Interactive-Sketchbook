@@ -48,6 +48,13 @@ function draw() {
     textFont("merriweather");
     //text("Collect 10 points by Clicking when Red.", 150, height/2);
     //text("(Press any key to start.)", 300, height/2+60);
+
+    push(); 
+    translate(hexX, hexY); 
+    drawHexagon(80);
+    pop();
+
+    
     
   } else {
     textFont("impact");

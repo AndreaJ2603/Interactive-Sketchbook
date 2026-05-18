@@ -57,4 +57,16 @@ body {
         background-color: #E5E5E5; /* Color of the line */
     }
 
+
+    .containerV {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .boxV {
+        flex: 1; 
+        width: 100%;
+    }
+
 }

@@ -1,44 +1,128 @@
-@import url('https://googleapis.com');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-    background-color: #F5F5F5; /* You can use color names, HEX, or RGB */
-    .fixed-width-container { width: 1000px; }
-    .center-container {
-         text-align: center;
-    }
+@layer base {
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
+  }
+}
 
-    .left-text { text-align: left; }
+@tailwind components;
+@tailwind utilities;
 
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
 
-    img {
-        display: block;
-        margin: 0 auto;
-    }
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
 
-    a {
-        color: black;
-    }
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
 
-    font-family: 'Verdana', sans-serif;
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
 
-    .thick-line {
-        height: 20px;            /* This determines the thickness */
-        background-color: #C8C8C8; /* This determines the color */
-        width: 100%;             /* This makes it span across the container */
-    }
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
 
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
 
-    .flex-container {
-         display: flex; /* Aligns children side by side */
-    }
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
 
-    .sidebar {
-        flex: 0 0 20%; /* Fixed at 30% width */
-    }
+.animate-spin {
+  animation: var(--animate-spin);
+}
 
-    .main-content {
-        flex: 1; /* Automatically fills the remaining 70% space */
-    }
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
 
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
 
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
 }

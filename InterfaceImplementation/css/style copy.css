@@ -1,0 +1,44 @@
+@import url('https://googleapis.com');
+
+body {
+    background-color: #F5F5F5; /* You can use color names, HEX, or RGB */
+    .fixed-width-container { width: 1000px; }
+    .center-container {
+         text-align: center;
+    }
+
+    .left-text { text-align: left; }
+
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    a {
+        color: black;
+    }
+
+    font-family: 'Verdana', sans-serif;
+
+    .thick-line {
+        height: 20px;            /* This determines the thickness */
+        background-color: #C8C8C8; /* This determines the color */
+        width: 100%;             /* This makes it span across the container */
+    }
+
+
+    .flex-container {
+         display: flex; /* Aligns children side by side */
+    }
+
+    .sidebar {
+        flex: 0 0 20%; /* Fixed at 30% width */
+    }
+
+    .main-content {
+        flex: 1; /* Automatically fills the remaining 70% space */
+    }
+
+
+}

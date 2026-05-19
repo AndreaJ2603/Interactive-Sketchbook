@@ -193,7 +193,7 @@ function keyPressed() {
 }
 
 
-function doubleClicked() {
+function touchEnded() {
   if (!isStarted) {
     isStarted = true;
     beginTime = millis();

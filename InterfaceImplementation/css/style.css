@@ -47,6 +47,21 @@ body {
     }
 
 
+    @media screen and (max-width: 600px) {
+        .flex-container {
+            background-color: #F5F5F5;
+        }
+
+        .sidebar {
+            background-color: #F5F5F5;
+        }
+
+        .main-content {
+            background-color: #F5F5F5;
+        }
+    }   
+
+
     .container {
         display: flex;
         width: 100%;

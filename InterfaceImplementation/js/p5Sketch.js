@@ -185,6 +185,21 @@ function keyPressed() {
 }
 
 
+function touchStarted() {
+  if (!isStarted) {
+    isStarted = true;
+    beginTime = millis();
+  }
+  
+
+  if (timeIsUp) {
+    beginTime = millis();
+    myPoints = 0;
+    timeIsUp = false;
+  }
+}
+
+
 function drawHexagon(radius) {
   beginShape();
   for (let i = 0; i < 6; i++) {

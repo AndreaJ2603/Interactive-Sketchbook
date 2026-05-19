@@ -170,6 +170,14 @@ function mousePressed() {
   //changeShape = mousePressedCount%2;
 }
 
+
+function touchStarted() {
+  if (isRed) {
+    myPoints++;
+  }
+}
+
+
 function keyPressed() {
   if (!isStarted && (key === ' ' || keyCode === 32)) {
     isStarted = true;
@@ -185,7 +193,7 @@ function keyPressed() {
 }
 
 
-function touchStarted() {
+function touchEnded() {
   if (!isStarted) {
     isStarted = true;
     beginTime = millis();

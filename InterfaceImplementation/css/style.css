@@ -50,32 +50,6 @@ body {
         display: none;
     }
 
-    @media screen and (max-width: 600px) {
-        .sidebar {
-            display: none;
-        }
-
-        
-        font-size: 10px;
-        
-
-        h1 {
-            font-size: 2.5rem; /* 2.5 times the base size */
-        }
-
-        h2 {
-            font-size: 2rem;
-        }
-
-        .desktop-text {
-             display: none;
-        }
-        .mobile-text {
-            display: block;
-        }
- 
-   }   
-
 
     .container {
         display: flex;
@@ -114,3 +88,31 @@ body {
     }
 
 }
+
+
+
+    @media screen and (max-width: 600px) {
+        .sidebar {
+            display: none;
+        }
+
+        body {
+            font-size: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem; /* 2.5 times the base size */
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .desktop-text {
+             display: none;
+        }
+        .mobile-text {
+            display: block;
+        }
+ 
+   }   

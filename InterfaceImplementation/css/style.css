@@ -110,9 +110,9 @@ a:hover {
             font-size: 20px;
         }
 
-        /*.desktop-text {
+        .desktop-text {
              display: none;
-        }*/
+        }
         .mobile-text {
             display: block;
         }

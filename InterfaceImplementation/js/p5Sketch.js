@@ -30,7 +30,7 @@ function setup() {
   }*/
 
   cnv = createCanvas(1200, 600);   
-  //cnv.parent('sketch-container');
+  cnv.parent('sketch-container');
   textSize(50); 
   beginTime = millis();
   startTime = millis();  

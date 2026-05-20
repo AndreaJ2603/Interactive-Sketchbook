@@ -15,9 +15,9 @@ body {
         margin: 0 auto;
     }
 
-
-
     font-family: 'Verdana', sans-serif;
+
+}
 
     .thick-line {
         height: 20px;            /* This determines the thickness */
@@ -79,7 +79,7 @@ body {
         border-radius: 15px; 
     }
 
-}
+
 
 a {
     color: black;
@@ -93,7 +93,7 @@ a:hover {
 
 
 
-    @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
         .sidebar {
             display: none;
         }

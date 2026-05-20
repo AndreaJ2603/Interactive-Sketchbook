@@ -22,7 +22,14 @@ let cnv;
 
 
 function setup() {
-  cnv = createCanvas(1200, 600);   
+
+  if (windowWidth < 600) {
+    cnv = createCanvas(600, 300); // Mobile size
+  } else {
+    cnv = createCanvas(1200, 600); // Desktop fixed size
+  }
+
+  //cnv = createCanvas(1200, 600);   
   cnv.parent('sketch-container');
   textSize(50); 
   beginTime = millis();
